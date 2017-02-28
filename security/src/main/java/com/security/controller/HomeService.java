@@ -14,5 +14,6 @@ public class HomeService {
 	@PreAuthorize("#userVO.user_name == authentication.name or hasRole(‘ROLE_ADMIN')")
 	public void getUser(UserVO userVO) {
 		logger.info("getUser success");
+		System.out.println("작동안함????");
 	}
 }
