@@ -10,5 +10,21 @@
 		(#{name},#{gender},#{ID},#{PW},#{age})	
 	</insert>
 	
-	<select id="selectMember" parameterType="int" resultType=""></select>
+	<select id="selectMember" parameterType="int" resultType="com.wil.domain.MemberVO">
+		select * from tbl_member 
+		where mno = #{mno}
+	</select>
+	
+	<select id="selectAll" resultType="com.wil.domain.MemberVO">
+		select * from tbl_member
+	</select>
+	
+	<update id="updateMember" parameterType="com.wil.domain.MemberVO">
+		update tbl_member set name=#{name}, gender=#{gender},
+		age=#{age}, ID=#{ID}, PW=#{PW} where mno=#{mno}
+	</update>
+	
+	<delete id="deleteMember" parameterType="int">
+		delete from tbl_member where mno = #{mno}
+	</delete>
 </mapper>

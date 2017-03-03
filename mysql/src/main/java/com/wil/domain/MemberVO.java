@@ -39,6 +39,13 @@ public class MemberVO {
 	public void setMno(int mno) {
 		this.mno = mno;
 	}
+
+@Override
+	public String toString(){
+		return "MemberVO [name=" + name +", gender=" 
+				+ gender +", ID=" + ID + ", PW=" +PW+",age="
+				+age+",mno="+mno+"]";
+}
 	
 	
 }
