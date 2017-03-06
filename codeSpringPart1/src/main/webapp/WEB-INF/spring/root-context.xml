@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<context:component-scan base-package="com.wil.persistence"></context:component-scan>
+	
+	<!-- <bean class="com.wil.persistence.MemberDAOImpl">
+		<property name="session" ref="sqlSession"></property>
+	</bean> -->	
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:mappers/**/*.xml"></property>
+	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>
+	
+	<bean class="com.wil.persistence.TimeDAO">
+		<property name="ds" ref="dataSource"></property>
+	</bean>
+			
+	<bean id="str" class="java.lang.String">
+		<constructor-arg value="서울"></constructor-arg>
+	</bean>
+	
+	<bean id="name" class="java.lang.String">
+		<constructor-arg value="평양"></constructor-arg>
+	</bean>
+	
+	<bean class="com.wil.controller.KoreanService">
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+		<property name="url" value="jdbc:log4jdbc:mysql://127.0.0.1:3306/security"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="test"></property>
+	</bean>
+	
+	
+</beans>
