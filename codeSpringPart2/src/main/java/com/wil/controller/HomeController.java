@@ -1,4 +1,4 @@
-package com.genuine.controller;
+package com.wil.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
