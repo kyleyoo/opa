@@ -24,7 +24,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	
 	<delete id="delete">
-	delete from btl_board where bno=#{bno}
+	delete from tbl_board where bno=#{bno}
 	</delete>
 	
 	<select id="listAll" resultType="com.wil.domain.BoardVO">

@@ -5,6 +5,6 @@
 <configuration>
 
 	<typeAliases>
-		<package name="com.wil.persistence.MemberMapper"/>
+		<package name="com.wil.domain"/>
 	</typeAliases>
 </configuration>
