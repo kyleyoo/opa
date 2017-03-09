@@ -14,7 +14,7 @@
 	var result='${msg}';
 	
 	if(result == 'SUCCESS'){
-		alert("처리가 완료되었습니다.브랜치확인");
+		alert("처리가 완료되었습니다.");
 	}
 </script>
 <body>
