@@ -6,7 +6,7 @@
 
 <%@include file="../include/header.jsp"%>
 
-<form role="form" method="post">
+<form role="form" action="modifyPage" method="post">
 	<input type='hidden' name='bno' value="${boardVO.bno }">
 	<input type='hidden' name='page' value="${cri.page }">
 	<input type='hidden' name='perPageNum' value="${cri.perPageNum }">
@@ -55,8 +55,8 @@
 		});
 	
 		$(".btn-primary").on("click", function() {
-			formObj.attr=("method", "get");
-			formObj.attr=("action","/board/listPage");
+			formObj.attr("method", "get");
+			formObj.attr("action","/board/listPage");
 			formObj.submit();
 		});
 	});
