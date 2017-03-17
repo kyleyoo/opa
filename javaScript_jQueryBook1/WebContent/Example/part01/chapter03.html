@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var test = 100;
+	var result = test.toString();
+	document.write("result = "+result,"<br>");
+	
+	var result1 = String(test);
+	document.write("result = "+result1,"<br>");
+	
+	var result2 = test+"";
+	document.write("result = "+result2,"<br>");
+	
+	var test = "100.50";
+	var result = Number(test)+150+Number("20");
+	document.write("result = "+result+"<br>");
+	
+	var test = "100.50";
+	var result1 = parseFloat(test)+150+parseInt("20");
+	document.write("result = "+result1);
+</script>
+</body>
+</html>
