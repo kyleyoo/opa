@@ -1,40 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        #panel {
+            width:300px;
+            height:200px;
+            border:1px solid #000;
+            font-size:11px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btnCheck").on("click", function(){
+				$("#panel").css("border","4px solid #f00");
+			});
+		})
+		
+		$(document).ready(function(){
+			$("#btnCheck").on("click",function(){
+				$("#panel").css({
+					"fontSize":16,
+					"color":"#f00"
+				})
+			})
+		})
+	</script>
 </head>
+
 <body>
-	<div>
-		<p>
-			이 문서는 jQuery를 사용하는 이유를 설명하기 위해 만든 예제입니다.
-		</p>
-		<p>
-			질문: 스크립트를 이용해 문서에서 #menu2의 li 태그 스타일 속성 중 글자색을 모두 빨간색으로 변경해 주세요.
-		</p>
-	</div>
-	<ul class="menu" id="menu1">
-		<li>menu1-1</li>
-		<li>menu1-2</li>
-		<li>menu1-3</li>
-		<li>menu1-4</li>
-		<li>menu1-5</li>
-		<li>menu1-6</li>
-		<li>menu1-7</li>
-	</ul>
-	<ul class="menu" id="menu2">
-		<li>menu2-1</li>
-		<li>menu2-2</li>
-		<li>menu2-3</li>
-		<li>menu2-4</li>
-		<li>menu2-5</li>
-	</ul>
+    <button id="btnCheck">확인</button>
+    <div id="panel">
+        초보자가 알아야 할 jQuery 핵심 기능: 스타일 설정하기
+
+    </div>
+
 </body>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-		$("#menu2 li").css("color","#f00");
-	})
-</script>
 </html>
