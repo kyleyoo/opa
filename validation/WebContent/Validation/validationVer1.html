@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validationVer1</title>
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="jquery.validate.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#valiex").validate({
+            rules: {
+                name:{
+                    required:true,
+                    minlength:2,
+                    maxlength:15
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                homepage:{
+                    required:true,
+                    url:true
+                },
+                password:{
+                    required:true,
+                    minlength:3,
+                    maxlength:12
+                },
+                pwchk:{
+                    required:true,
+                    minlength:3,
+                    maxlength:12,
+                    equalTo:"#password"
+                }
+            },
+            messages:{
+                name:{
+                    required:"이름을 입력하세요",
+                    minlength:"{0}글자 이상으로 입력하세요.",
+                    maxlength:"{0}그자 이하로 입력하세요."
+                },
+                email:{
+                    required:"이메일을 입력하세요.",
+                    email:"이메일을 바르게 입력하세요."
+                },
+                homepage:{
+                    required:"홈페이지 주소를 입력하세요.",
+                    url:"홈페이지 주소를 바르게 입력하세요."
+                },
+                password:{
+                    required:"비밀 번호를 입력하세요.",
+                    minlength:"{0}글자 이상으로 입력하세요.",
+                    maxlength:"{0}글자 이하로 입력하세요."
+                },
+                pwchk:{
+                    required:"비밀 번호를 입력하세요.",
+                    minlength:"{0}글자 이상으로 입력하세요.",
+                    maxlength:"{0}글자 이하로 입력하세요.",
+                    equalTo:"비밀 번호가 서로 일치하지 않습니다."
+                }
+            }
+        });
+    });
+</script>
+
+<form id="valiex">
+    <p>이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=text" name="name" /></p>
+    <p>이메일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" /></p>
+    <p>홈페이지&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="homepage" /></p>
+    <p>비밀 번호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="password" name="password"/></p>
+    <p>비밀 번호 확인&nbsp;<input type="text" id="pwchk" name="pwchk"/></p>
+    <input type="submit" value="보내기"/>
+</form>
+</body>
+</html>
