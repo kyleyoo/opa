@@ -7,12 +7,15 @@
 <body>
 <script type="text/javascript">
 
-	var input = Number(prompt('숫자를 입력해주세요.', '숫자'));
+	var output = 0;
 	
-	input % 2 == 0 || alert('홀수입니다.');
-	input % 2 == 0 && alert('짝수입니다.');
-
-	
+	for(var i = 1; i <= 10; i++){
+		if(i % 2 == 1){
+			continue;
+		}
+		output += 1;
+	}
+	alert(output);
 </script>
 </body>
 </html>
