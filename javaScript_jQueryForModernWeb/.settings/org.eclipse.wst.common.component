@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="javaScript_jQueryForModernWeb">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="javaScript_jQueryForModernWeb"/>
+        <property name="java-output-path" value="/javaScript_jQueryForModernWeb/build/classes"/>
+    </wb-module>
+</project-modules>
