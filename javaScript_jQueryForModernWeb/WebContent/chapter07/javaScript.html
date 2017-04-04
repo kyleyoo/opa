@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	class Person{
+		public name: number;
+		public age: number;
+	
+		public Person(name, age){
+			this.name = name;
+			this.age = age;
+		}
+		
+		public toString(){
+			return this.name + " : " + this.age;
+		}
+	} 
+	
+	var person = new Person();
+	alert(person.toString());
+</script>
+</body>
+</html>

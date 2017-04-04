@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function Rectangle(width, height) {
+		
+		var width = width;
+		var height = height;
+	
+		this.getWidth = function() {
+			return width;
+		};
+		this.getHeight = function() {
+			return height;
+		};
+		this.setWidth = function(width) {
+			if (width < 0) {
+				throw '길이는 음수일 수 없습니다.';
+			} else {
+				width = width;
+			}
+		};
+		this.setHeight = function(height) {
+			if (height < 0) {
+				throw '길이는 음수일 수 없습니다.';
+			} else {
+				height = height;
+			}
+		};
+	};
+	Rectangle.prototype.getArea = function() {
+		return this.getWidth() * this.getHeight();
+	};
+</script>
+<script>
+	function Square(length){
+		this.base = Rectangle;
+		this.base(length, length);
+	}
+	
+	Square.prototype = Rectangle.prototype;
+	Square.prototype.constructor = Square;
+	
+	var rectangle = new Rectangle(5, 7);
+	var square = new Square(5);
+	alert(rectangle.getArea() + ' : ' + square.getArea());
+	alert(square instanceof Rectangle);
+</script>
+</body>
+</html>
