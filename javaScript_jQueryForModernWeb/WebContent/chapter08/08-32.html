@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	
+	var object = {
+			name: '윤인성'
+	};
+	
+	Object.defineProperty(object, 'region',{
+		value: '서울특별시'
+	});
+	
+	var descriptors = [];
+	descriptors.push(Object.getOwnPropertyDescriptor(object, 'name'));
+	descriptors.push(Object.getOwnPropertyDescriptor(object, 'region'));
+	
+	var output = '';
+	for(var i in descriptors){
+		var item = descriptors[i];
+		for(var key in item){
+			output += key + ' : ' + item[key] + '\n';
+		}
+		output += '-----------------------\n';
+	}
+	alert(output);
+</script>
+</body>
+</html>
