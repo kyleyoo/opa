@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		*{border: 3px solid black;}
+	</style>
+	<script>
+	</script>
+</head>
+<body>
+	<h1 id="header">
+		<p id="paragraph">Paragraph</p>
+	</h1>
+	<script>
+		document.getElementById('paragraph').onclick = function(e){
+			
+			var event = e || window.event;
+			
+			alert('paragraph');
+			
+			event.cancelBubble = true;
+			
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}
+		};
+	</script>
+</body>
+</html>
