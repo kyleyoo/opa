@@ -42,6 +42,46 @@
         min: jQuery.validator.format("{0} 이상으로 입력해 주세요.")
     });
 
+    function goPayNice() {
+		var amount = $('input[name="GoodsName"]', '#payForm').val();
+		var goodsname = $('input[name="Amt"]', '#payForm').val();
+		var buyername = $("#userName").val().trim();
+		var usernumber1 = $("#userNumber").val().trim();
+		var usernumber2 = $("#userNumber2").val().trim();
+		var usernumber3 = $("#userNumber3").val().trim();
+		var usernumber = usernumber1+usernumber2+usernumber3;
+		var result1 = checkNull(buyername, usernumber);
+		if(result1 ==true){
+			var result2 = check(usernumber);
+			if(result2 == true){
+			// 전화번호, 이름 입력 체크
+				$.post('/jeju/saveDb.php', {'AMOUNT' : amount,'GOODSNAME' : goodsname}, function(data){
+					$('input[name="TID"]', '#payForm').val(data.tid);
+					$('input[name="MID"]', '#payForm').val(data.mid);
+					$('input[name="GoodsName"]', '#payForm').val(data.goodsname);
+					$('input[name="UserIP"]', '#payForm').val(data.userip);
+					$('input[name="MallIP"]', '#payForm').val(data.mallip);
+					$('input[name="Amt"]', '#payForm').val(data.amt);
+					$('input[name="VbankExpDate"]', '#payForm').val(data.vbankexpdate);
+					$('input[name="EdiDate"]', '#payForm').val(data.edidate);
+					$('input[name="EncryptData"]', '#payForm').val(data.encryptdata);
+					$('input[name="BuyerName"]', '#payForm').val(buyername);
+					$('input[name="BuyerTel"]', '#payForm').val(usernumber);
+					goPay(payForm);
+
+					$('.layer_popup').css('display','none');
+				}, 'json').error(function(e){alert(e.message)});
+			}else{
+				alert("이름과 번호를 확인하세요");
+			}
+		}else{
+			alert("이름과 번호를 확인하세요");
+		}
+		
+		
+	}
+    
+    
 </script>
 
 <form id="form" method="get" action="">
