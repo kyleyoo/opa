@@ -9,30 +9,24 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('h1').addClass('high-light');
-		});
-		
-		$(document).ready(function(){
-			$('h1').each(function (index, item){
+			var array = [
+	             { name: 'Hanbit Media', link: 'http://hanb.co.kr'},
+	             { name: 'Naver', link: 'http://naver.com'},
+	             { name: 'Daum', link: 'http://daum.net'},
+	             { name: 'Paran', link: 'http://paran.com'}
+	        ];
+			
+			//$.each() 메서드를 사용합니다.
+			$.each(array, function(index, item){
+				var output = '';
 				
+				output += '<a href="' + item.link + '">';
+				output += '	<h1>' + item.name + '</h1>';
+				output += '</a>';
+				
+				document.body.innerHTML += output;
 			});
 		});
 	</script>
 </head>
-<body>
-	<h1>item - 0</h1>
-	<h1>item - 1</h1>
-	<h1>item - 2</h1>
-	<h1>item - 3</h1>
-	<h1>item - 4</h1>
-</body>
-<script type="text/javascript">
-	$(document).ready(function(){
-		
-	});
-	
-	windows.onload = function(){
-		
-	};
-</script>
 </html>

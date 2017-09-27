@@ -4,25 +4,28 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('tr:odd').css('background','#F9F9F9');
+			$('tr:eq(0)').css('background','#000000').css('color','white');
 			
-			$('tr:even').css('background','#9F9F9F');
+			$('td:nth-child(3n+1)').css('background','#565656');
 			
-			$('tr:first').css('background','#000000').css('color','#FFFFFF');
+			$('td:nth-child(3n+2)').css('background','#A9A9A9');
+			
+			$('td:nth-child(3n)').css('background','#F9F9F9');
+			
 		});
 	</script>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<table>
-		<tr><th>ÀÌ¸§</th><th>Ç÷¾×Çü</th><th>Áö¿ª</th></tr>
-		<tr><td>°­¹Î¼ö</td><td>ABÇü</td><td>¼­¿ïÆ¯º°½Ã ¼ÛÆÄ±¸</td></tr>
-		<tr><td>±¸Áö¿¬</td><td>BÇü</td><td>¹Ì±¹ Ä¶¸®Æ÷´Ï¾Æ</td></tr>
-		<tr><td>±è¹ÌÈ­</td><td>ABÇü</td><td>¹Ì±¹ ¸Ş»çÃß¼¼Ã÷</td></tr>
-		<tr><td>±è¼±È­</td><td>OÇü</td><td>¼­¿ï °­¼­±¸</td></tr>
-		<tr><td>³²±âÁÖ</td><td>AÇü</td><td>¼­¿ï ³ë·®Áø±¸</td></tr>
-		<tr><td>À±ÇÏ¸°</td><td>BÇü</td><td>¼­¿ï ¿ë»ê±¸</td></tr>
+		<tr><th>ì´ë¦„</th><th>í˜ˆì•¡í˜•</th><th>ì§€ì—­</th></tr>
+		<tr><td>ê°•ë¯¼ìˆ˜</td><td>ABí˜•</td><td>ì„œìš¸íŠ¹ë³„ì‹œ ì†¡íŒŒêµ¬</td></tr>
+		<tr><td>êµ¬ì§€ì—°</td><td>Bí˜•</td><td>ë¯¸êµ­ ìº˜ë¦¬í¬ë‹ˆì•„</td></tr>
+		<tr><td>ê¹€ë¯¸í™”</td><td>ABí˜•</td><td>ë¯¸êµ­ ë©”ì‚¬ì¶”ì„¸ì¸ </td></tr>
+		<tr><td>ê¹€ì„ í™”</td><td>Oí˜•</td><td>ì„œìš¸ ê°•ì„œêµ¬</td></tr>
+		<tr><td>ë‚¨ê¸°ì£¼</td><td>Aí˜•</td><td>ì„œìš¸ ë…¸ëŸ‰ì§„êµ¬</td></tr>
+		<tr><td>ìœ¤í•˜ë¦°</td><td>Bí˜•</td><td>ì„œìš¸ ìš©ì‚°êµ¬</td></tr>
 	</table>
 </body>
 </html>
