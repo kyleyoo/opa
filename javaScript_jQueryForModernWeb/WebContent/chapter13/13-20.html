@@ -3,22 +3,22 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-</head>
-<body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		alert('First READY');
+		$('body *').css('color', 'red');
 	});
-	
-	$(document).ready(function(){
-		alert('Second READY');
-	});
-	
-	$(document).ready(function(){
-		alert('Third READY');
-	});
-	
 </script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Apple</li>
+			<li>Bag</li>
+			<li>Cat</li>
+			<li>Dog</li>
+			<li>Elephant</li>
+		</ul>
+	</div>
 </body>
 </html>

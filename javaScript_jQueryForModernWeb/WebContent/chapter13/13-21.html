@@ -3,22 +3,18 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-</head>
-<body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		alert('First READY');
+		$('input[type="text"]').val('Hello jQuery..!');
 	});
-	
-	$(document).ready(function(){
-		alert('Second READY');
-	});
-	
-	$(document).ready(function(){
-		alert('Third READY');
-	});
-	
 </script>
+</head>
+<body>
+	<input type="text"/>
+	<input type="password"/>
+	<input type="radio"/>
+	<input type="checkbox"/>
+	<input type="file"/>
 </body>
 </html>
